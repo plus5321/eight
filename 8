@@ -1,0 +1,22 @@
+docker -v
+docker login
+docker pull ubuntu
+docker run --name=devs -it ubuntu
+ls
+cd tmp
+ls
+touch abc.txt
+root@6d0291924d68:/tmp# touch ab.txt
+root@6d0291924d68:/tmp# touch a.txt
+ls
+exit
+PS C:\Users\rohit> docker start devs
+devs
+PS C:\Users\rohit> docker diff devs
+ docker images
+ docker ps
+ docker commit devs new_devs
+ docker ps
+ docker images
+PS C:\Users\rohit> docker tag new_devs:latest rohit20ce1091/new_devs:latest
+PS C:\Users\rohit> docker push rohit20ce1091/new_devs:latest
